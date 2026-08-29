@@ -142,8 +142,8 @@ const $ = s => document.querySelector(s);
 
 const MES = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
 function fecha(s){
-  const m = String(s||'').match(/(\d{2})\/(\d{2})\/(\d{4})/);
-  return m ? new Date(+m[3], +m[2]-1, +m[1]) : null;
+  const m = String(s||'').match(/(\d{1,2})\/(\d{1,2})\/(\d{4})/);
+  return m ? new Date(+m[3], +m[1]-1, +m[2]) : null;  // MM/DD/YYYY
 }
 function bonita(s){
   const d = fecha(s);
