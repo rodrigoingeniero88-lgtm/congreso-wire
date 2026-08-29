@@ -225,7 +225,9 @@ function pintar(){
           esc(o.activo)+'</div>'+
         '<div class="op-amt">'+esc(o.monto)+'</div>'+
         '<div class="op-tags"><span class="'+dir.trim()+'">'+esc(o.tipo)+'</span>'+
-          ' · '+esc(o.clase)+' · '+esc(o.dueno)+' · op. '+bonita(o.fecha_op)+'</div>'+
+          (o.acciones ? ' · '+esc(o.acciones)+' acciones' : '')+
+          (o.clase ? ' · '+esc(o.clase) : '')+
+          ' · '+esc(o.dueno)+' · op. '+bonita(o.fecha_op)+'</div>'+
         '<div class="lag"><div class="lag-track">'+
           '<div class="lag-fill '+cls+'" style="width:'+pct+'%"></div></div>'+
           '<div class="lag-n">'+(d === null ? 's/d' : d+' días')+'</div></div>'+
