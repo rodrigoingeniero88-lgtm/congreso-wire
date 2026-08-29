@@ -29,7 +29,7 @@ import pdfplumber
 
 # La SEC exige identificarse con un correo de contacto para servir archivos.
 # Sin esto, www.sec.gov devuelve 403. Poné tu propio correo acá.
-CONTACTO = "tu-correo@ejemplo.com"
+CONTACTO = "rodrigo.ingeniero88@gmail.com"
 UA = f"congreso-wire/1.0 ({CONTACTO})"
 BASE = "https://disclosures-clerk.house.gov/public_disc"
 
