@@ -25,13 +25,17 @@ jobs:
           python-version: "3.12"
 
       - name: Instalar dependencias
-        run: pip install requests pdfplumber
+        run: pip install requests pdfplumber pyyaml
 
       - name: Leer los PTR del Clerk
         run: python scraper.py
 
       - name: Leer los PTR del Senado
         run: python senado.py
+        continue-on-error: true
+
+      - name: Cruzar con los comités
+        run: python comites.py
         continue-on-error: true
 
       - name: Guardar los cambios
